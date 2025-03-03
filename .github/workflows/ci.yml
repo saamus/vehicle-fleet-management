@@ -31,4 +31,5 @@ jobs:
         run: npm run format -- --write
 
       - name: Run Cucumber tests
-        run: npx cucumber-js --require ./Tests/Definitions/**/*.ts --require-module ts-node/register ./Tests/Features/**/*.feature
+        run: npm test
+        # run: npx cucumber-js --require ./Tests/Definitions/**/*.ts --require-module ts-node/register ./Tests/Features/**/*.feature
