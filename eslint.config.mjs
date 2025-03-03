@@ -8,4 +8,4 @@ export default [
       "no-console": "warn",           // Warn on usage of console.log()
     }
   }
-];
+];  
