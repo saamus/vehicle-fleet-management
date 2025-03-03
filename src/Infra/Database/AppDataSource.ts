@@ -1,9 +1,9 @@
-import 'reflect-metadata'
-import { DataSource } from 'typeorm'
-import { User } from '../../Domain/User'
-import { Fleet } from '../../Domain/Fleet'
-import { Vehicle } from '../../Domain/Vehicle'
-import { Location } from '../../Domain/Location'
+import 'reflect-metadata';
+import { DataSource } from 'typeorm';
+import { User } from '../../Domain/User';
+import { Fleet } from '../../Domain/Fleet';
+import { Vehicle } from '../../Domain/Vehicle';
+import { Location } from '../../Domain/Location';
 
 // export const AppDataSource = new DataSource({
 //   type: 'sqlite',
@@ -25,10 +25,10 @@ export const AppDataSource = new DataSource({
   entities: [User, Fleet, Vehicle, Location],
   synchronize: true,
   logging: false,
-})
+});
 
 AppDataSource.initialize()
   .then(() => {
     // TODO : place work here ?
   })
-  .catch((error) => console.log(error))
+  .catch((error) => console.log(error));

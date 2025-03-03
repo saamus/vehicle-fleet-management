@@ -1,15 +1,15 @@
 export class InMemoryFleetRepository {
-  fleets = new Map()
+  fleets = new Map();
   save(fleet) {
-    this.fleets.set(fleet.id, fleet)
+    this.fleets.set(fleet.id, fleet);
   }
   findById(id) {
-    return this.fleets.get(id)
+    return this.fleets.get(id);
   }
   findAll() {
-    return Array.from(this.fleets.values())
+    return Array.from(this.fleets.values());
   }
   remove(fleet) {
-    this.fleets.delete(fleet.id)
+    this.fleets.delete(fleet.id);
   }
 }

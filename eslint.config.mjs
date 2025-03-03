@@ -1,11 +1,11 @@
-import globals from 'globals'
-import pluginJs from '@eslint/js'
-import tseslint from 'typescript-eslint'
-
 /** @type {import('eslint').Linter.Config[]} */
 export default [
-  { files: ['**/*.{js,mjs,cjs,ts}'] },
-  { languageOptions: { globals: globals.browser } },
-  pluginJs.configs.recommended,
-  ...tseslint.configs.recommended,
-]
+  {
+    files: ["**/*.js"],  // Lint JavaScript files
+    rules: {
+      "semi": ["error", "always"],   // Enforce semicolons at the end of statements
+      "quotes": ["error", "double"], // Enforce double quotes for strings
+      "no-console": "warn",           // Warn on usage of console.log()
+    }
+  }
+];

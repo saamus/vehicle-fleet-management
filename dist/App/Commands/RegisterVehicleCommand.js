@@ -1,8 +1,8 @@
 export class RegisterVehicleCommand {
-  fleetId
-  vehiclePlate
+  fleetId;
+  vehiclePlate;
   constructor(fleetId, vehiclePlate) {
-    this.fleetId = fleetId
-    this.vehiclePlate = vehiclePlate
+    this.fleetId = fleetId;
+    this.vehiclePlate = vehiclePlate;
   }
 }
