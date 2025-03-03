@@ -1,9 +1,9 @@
-import "reflect-metadata";
-import { DataSource } from "typeorm";
-import { User } from "../../Domain/User";
-import { Fleet } from "../../Domain/Fleet";
-import { Vehicle } from "../../Domain/Vehicle";
-import { Location } from "../../Domain/Location";
+import 'reflect-metadata'
+import { DataSource } from 'typeorm'
+import { User } from '../../Domain/User'
+import { Fleet } from '../../Domain/Fleet'
+import { Vehicle } from '../../Domain/Vehicle'
+import { Location } from '../../Domain/Location'
 
 // export const AppDataSource = new DataSource({
 //   type: 'sqlite',
@@ -16,19 +16,19 @@ import { Location } from "../../Domain/Location";
 // });
 
 export const AppDataSource = new DataSource({
-  type: "postgres",
-  host: "localhost",
+  type: 'postgres',
+  host: 'localhost',
   port: 5432,
-  username: "postgres",
-  password: "postgres",
-  database: "fleet_management",
+  username: 'postgres',
+  password: 'postgres',
+  database: 'fleet_management',
   entities: [User, Fleet, Vehicle, Location],
   synchronize: true,
   logging: false,
-});
+})
 
 AppDataSource.initialize()
   .then(() => {
     // TODO : place work here ?
   })
-  .catch((error) => console.log(error));
+  .catch((error) => console.log(error))

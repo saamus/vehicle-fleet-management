@@ -1,23 +1,23 @@
-import { Fleet } from "./Fleet";
-import { Entity, PrimaryColumn, Column, OneToMany } from "typeorm";
+import { Fleet } from './Fleet'
+import { Entity, PrimaryColumn, Column, OneToMany } from 'typeorm'
 
 @Entity()
 export class User {
   @PrimaryColumn()
-  id: string; 
+  id: string
   @Column()
-  name!: string;
+  name!: string
 
   @Column()
-  email!: string;
+  email!: string
 
-  // One-to-many relationship with Fleet 
+  // One-to-many relationship with Fleet
   @OneToMany(() => Fleet, (fleet) => fleet.user)
-  fleets!: Fleet[];
+  fleets!: Fleet[]
 
   constructor(id: string, name: string, email: string) {
-    this.id = id;
-    this.name = name;
-    this.email = email;
+    this.id = id
+    this.name = name
+    this.email = email
   }
 }

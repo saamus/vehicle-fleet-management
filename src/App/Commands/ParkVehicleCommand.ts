@@ -3,6 +3,6 @@ export class ParkVehicleCommand {
     public vehiclePlate: string,
     public latitude: number,
     public longitude: number,
-    public altitude: number,
+    public altitude: number
   ) {}
 }
